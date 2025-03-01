@@ -5,7 +5,7 @@ mkdir -p /work/OpenFlux-OS/iso/boot/grub
 
 nasm -f bin -o /work/OpenFlux-OS/boot/boot.bin /work/OpenFlux-OS/boot/boot.asm
 
-
+# ملاحظة هنا مسار كل ملف حطه :)
 gcc -ffreestanding -c /work/OpenFlux-OS/kernel/kernel.c -o /work/OpenFlux-OS/kernel/kernel.o
 gcc -ffreestanding -c /work/OpenFlux-OS/kernel/ui.c -o /work/OpenFlux-OS/kernel/ui.o
 ld -o /work/OpenFlux-OS/kernel/kernel.bin -Ttext 0x1000 --oformat binary /work/OpenFlux-OS/kernel/kernel.o /work/OpenFlux-OS/kernel/ui.o
